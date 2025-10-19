@@ -1,7 +1,6 @@
 from typing import Tuple, List, Dict, Any
 import torch
 
-
 def build_number_token_mapping(tokenizer, num_classes: int = 3) -> List[int]:
     """
     Encode các số 0..num_classes thành token ID từ tokenizer.
@@ -14,7 +13,6 @@ def build_number_token_mapping(tokenizer, num_classes: int = 3) -> List[int]:
             raise ValueError(f"Tokenization for '{i}' failed.")
         number_token_ids.append(tokens[0])
     return number_token_ids
-
 
 def trim_lm_head_to_numbers(model: Any, number_token_ids: List[int]) -> Dict[str, Any]:
     """
@@ -35,7 +33,6 @@ def trim_lm_head_to_numbers(model: Any, number_token_ids: List[int]) -> Dict[str
         "number_token_ids": number_token_ids,
         "reverse_map": reverse_map,
     }
-
 
 def restore_full_lm_head(model: Any, old_size: int, number_token_ids: List[int]) -> None:
     """
