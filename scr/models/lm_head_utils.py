@@ -63,7 +63,6 @@ def restore_full_lm_head(model: Any, old_size: int, number_token_ids: List[int])
         device=trimmed_lm_head_bias.device,
     )
 
-    # Copy lại phần trọng số cho các token số
     for new_idx, orig_token_id in enumerate(number_token_ids):
         new_lm_head[orig_token_id] = trimmed_lm_head[new_idx]
         new_lm_head_bias[orig_token_id] = trimmed_lm_head_bias[new_idx]

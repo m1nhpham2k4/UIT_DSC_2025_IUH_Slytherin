@@ -28,19 +28,17 @@ class DataCollatorForLastTokenLM(DataCollatorForLanguageModeling):
         for i in range(labels.size(0)):
             valid_tokens = (labels[i] != self.ignore_index).nonzero(as_tuple=True)[0]
             if len(valid_tokens) == 0:
-                continue  # skip nếu sample toàn padding
+                continue  
 
             last_token_idx = valid_tokens[-1].item()
 
-            # Chỉ giữ lại token cuối cùng
             labels[i, :last_token_idx] = self.ignore_index
 
-            # Ánh xạ nhãn cuối cùng về index mới trong lm_head
             original_id = labels[i, last_token_idx].item()
             if original_id in self.reverse_map:
                 labels[i, last_token_idx] = self.reverse_map[original_id]
             else:
-                labels[i, last_token_idx] = self.ignore_index  # fallback an toàn
+                labels[i, last_token_idx] = self.ignore_index 
 
         batch["labels"] = labels
         return batch
