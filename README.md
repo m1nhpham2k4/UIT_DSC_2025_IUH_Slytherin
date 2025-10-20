@@ -29,37 +29,37 @@ During inference, **dynamic bias calibration** is used to balance prediction pro
 ```
 UIT_DSC_2025_IUH_SLYTHERIN/
 │
-├── data/                         # 📂 Dữ liệu gốc dùng cho huấn luyện và kiểm thử
-│   ├── test/                     # 📁 Tập dữ liệu kiểm thử
+├── data/                         # 📂 Original datasets for training and evaluation
+│   ├── test/                     # 📁 Test data
 │   │   ├── vihallu-private-test.csv
 │   │   └── vihallu-public-test.csv
-│   └── train/                    # 📁 Tập dữ liệu huấn luyện
+│   └── train/                    # 📁 Training data
 │       └── vihallu-train.csv
 │
-├── src/                          # 📂 Mã nguồn chính của dự án
-│   ├── data_utils/               # 🧩 Tiện ích xử lý dữ liệu
+├── src/                          # 📂 Main source code
+│   ├── data_utils/               # 🧩 Data processing utilities
 │   │   ├── __init__.py
-│   │   ├── collator.py           # Định nghĩa hàm collate_fn cho DataLoader
-│   │   ├── dataset_builder.py    # Xây dựng Dataset từ file CSV
-│   │   └── preprocess.py         # Hàm tiền xử lý dữ liệu (chuẩn hóa, làm sạch, tokenize,…)
+│   │   ├── collator.py           # Custom collate_fn for DataLoader
+│   │   ├── dataset_builder.py    # Dataset builder for CSV files
+│   │   └── preprocess.py         # Preprocessing (cleaning, normalization, tokenization,…)
 │   │
-│   ├── models/                   # 🧠 Các mô hình hoặc module liên quan đến LLM
+│   ├── models/                   # 🧠 Model-related components
 │   │   ├── __init__.py
-│   │   ├── lm_head_utils.py      # Tiện ích cho phần Linear head của mô hình ngôn ngữ
-│   │   └── qwen3_instruct.py     # Cấu hình hoặc triển khai mô hình Qwen3-Instruct
+│   │   ├── lm_head_utils.py      # Utilities for language model linear head manipulation
+│   │   └── qwen3_instruct.py     # Qwen3-Instruct model configuration and setup
 │   │
-│   ├── prompt/                   # 💬 Xử lý prompt cho huấn luyện/inference
+│   ├── prompt/                   # 💬 Prompt design and formatting
 │   │   ├── __init__.py
-│   │   ├── base_prompt.py        # Cấu trúc prompt cơ bản
-│   │   └── format_prompt.py      # Định dạng và xây dựng prompt cho từng nhiệm vụ
+│   │   ├── base_prompt.py        # Base prompt structure
+│   │   └── format_prompt.py      # Prompt formatting for training/inference tasks
 │   │
-│   └── tasks/                    # 🚀 Các tác vụ chính của project
+│   └── tasks/                    # 🚀 Core tasks (training & inference)
 │       ├── __init__.py
-│       ├── inference.py          # Chạy suy luận (inference)
-│       └── train.py              # Script huấn luyện mô hình
+│       ├── inference.py          # Run inference/prediction
+│       └── train.py              # Model fine-tuning script
 │
 └── LICENSE
-└── README.mb
+└── README.md
 ```
 
 ## ⚙️ Installation
