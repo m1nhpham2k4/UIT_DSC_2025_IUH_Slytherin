@@ -1,0 +1,7 @@
+torch
+unsloth
+transformers
+matplotlib
+seaborn
+numpy
+pandas

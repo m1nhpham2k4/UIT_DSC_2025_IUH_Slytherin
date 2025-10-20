@@ -10,11 +10,10 @@ def build_training_prompts(df: pd.DataFrame) -> List[str]:
         response_ = df['response'].iloc[i]
         label_ = df['label'].iloc[i]
         texts.append(PROMPT.format(context_, prompt_, response_, label_))
-        
+
     return texts
 
 def build_inference_prompts(df: pd.DataFrame) -> List[str]:
-    # Cắt phần “class {}” ra để model tự điền
     inference_template = PROMPT.split("class {}")[0] + "class "
     texts = []
     for i in range(len(df)):
