@@ -25,7 +25,7 @@ During inference, **dynamic bias calibration** is used to balance prediction pro
 
 ---
 
-## Kiến trúc thư mục
+## Project Structure
 ```
 UIT_DSC_2025_IUH_SLYTHERIN/
 │
