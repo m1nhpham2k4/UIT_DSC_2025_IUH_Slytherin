@@ -1,7 +1,7 @@
+numpy
+pandas
+seaborn
+matplotlib
 torch
 unsloth
 transformers
-matplotlib
-seaborn
-numpy
-pandas
