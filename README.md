@@ -27,9 +27,9 @@ During inference, **dynamic bias calibration** is used to balance prediction pro
 
 # Results
 
-![Leaderboard](./img/bxh.png)
-
 Achieved **Top 9** with a **macro-F1 score of 0.8389** in the *UIT Data Science Challenge 2025*.
+
+![Leaderboard](./img/bxh.png)
 
 ---
 
