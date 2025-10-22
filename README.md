@@ -1,4 +1,4 @@
-# 🐍 UIT_DSC_2025_IUH_Slytherin
+# 🐍 UIT_DSC_2025_IUH_Slytherin - LLM Hallucination Detection
 
 ---
 
@@ -22,6 +22,11 @@ During inference, **dynamic bias calibration** is used to balance prediction pro
 - **`class 1 – no`**: Response is fully consistent with the context.  
 - **`class 2 – intrinsic`**: Response contradicts or distorts the context.  
 - **`class 3 – extrinsic`**: Response adds external information not present in the context.
+
+---
+
+# Results
+![Leaderboard](D:/UIT/Build_UIT/img/bxh.png)
 
 ---
 
