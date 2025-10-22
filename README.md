@@ -26,8 +26,7 @@ During inference, **dynamic bias calibration** is used to balance prediction pro
 ---
 
 # Results
-![Leaderboard](D:/UIT/Build_UIT/img/bxh.png)
-
+![Leaderboard](./img/bxh.png)
 ---
 
 ## Project Structure
