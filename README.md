@@ -121,3 +121,15 @@ id,context,prompt,response,label
 | `--lora_r` | 16 | LoRA rank |
 | `--lora_alpha` | 16 | LoRA alpha scaling factor |
 | `--lora_dropout` | 0 | Dropout rate |
+
+
+### Train
+```bash
+python src/tasks/train.py
+```
+
+
+### Inference
+```bash
+python src/tasks/inference.py
+```
