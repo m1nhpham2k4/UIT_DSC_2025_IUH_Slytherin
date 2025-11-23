@@ -13,6 +13,8 @@ from data_utils.collator import DataCollatorForLastTokenLM
 from models.lm_head_utils import build_number_token_mapping, trim_lm_head_to_numbers, restore_full_lm_head
 from models.qwen3_instruct import load_model   # file chứa hàm load_model bạn viết
 
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 class Args:
     model_name = "unsloth/Qwen3-4B-Base"

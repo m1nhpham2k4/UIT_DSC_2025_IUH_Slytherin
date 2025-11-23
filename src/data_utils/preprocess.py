@@ -1,7 +1,8 @@
 # data_utils/preprocess.py
 
 from transformers import AutoTokenizer
-
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 def get_tokenizer(model_name: str):
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
     tokenizer.pad_token = tokenizer.eos_token

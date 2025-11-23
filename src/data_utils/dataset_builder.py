@@ -2,6 +2,8 @@
 
 import pandas as pd
 from datasets import Dataset
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from prompt.format_prompt import build_training_prompts, build_inference_prompts
 
 # Ánh xạ nhãn text sang số
